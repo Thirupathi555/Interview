@@ -1,0 +1,915 @@
+Linux
+
+200+ Linux Technical Interview Questions:
+ 1. Give any 3 examples of operating systems.
+ ● Windows,Linux, and macOS.
+ 2. Whatis the root home directory?
+ ● Theroothomedirectory is /root.
+ 3. Your company has terminated a server administrator. What is the first thing as an
+ administrator you should do to enhance the security?
+ ● Changetheroot password.
+ 4. Howtocheckkernel version?
+ ● Usethecommanduname-a.
+ 5. Howtobecomearootuser from a regular user?
+ ● Usesu- orsudo su toswitchtotherootuser.
+ 6. Howtocheckthe computer name or hostname in Linux?
+ ● Usethehostname command.
+ 7. List 3 basic commands to navigate the filesystem.
+ ● cd,pwd, and ls.
+ 8. Howtochecknetwork interfaces in Linux?
+ ● Useifconfigorip addr orip a
+ 9. List 3 different methods of adding a user.
+ ● Methodsinclude using useradd, adduser, or manually editing
+ /etc/passwd and /etc/shadow files.
+ 10.What is the command to create a new user?
+ ● useradd username
+ in/harunseker/
+ 1
+11.How to change a user password?
+ ● Usethecommandpasswd username.
+ 12.Which directory has all the configuration files?
+ ● The/etcdirectory.
+ 13.List any 4 Linux distributions.
+ ● Kali, Red Hat, CentOS, Ubuntu, and SUSE.
+ 14.How to log off from the system?
+ ● Usetheexitcommand.
+ 15.How to create a directory?
+ ● Usethemkdircommand.
+ 16.Explain the purpose of the “touch” command.
+ ● touchisusedto create an empty file or update the timestamp of an
+ existing file.
+ 17.If a command hangs, how to stop it and get the prompt back?
+ ● PressCtrl + C.
+ 18.Which command is used to count words or lines?
+ ● wc
+ 19.How to rename a file or directory?
+ ● Usethemvcommand.
+ 20.How to change a hostname in Linux?
+ ● Edit/etc/hostname and /etc/hosts, then restart the system or use
+ hostnamectl set-hostname newname.
+ 21.What is the command to change file/directory permissions?
+ ● Usechmod.
+ 22.What is the purpose of pipe (|)?
+ ● Topasstheoutput of one command asinput to another command.
+ 23.What is /etc directory used for?
+ ● Itcontains configuration files for the system.
+ 24.Which command is used to list files in a directory?
+ ● ls-l
+ 25.There is a command which gives you information about other commands, please
+ explain that command and what is it used for?
+ in/harunseker/
+ 2
+● manisusedtodisplay the manual pages for other commands, providing
+ detailed information on usage and options.
+ 26.How to delete a file and a directory?
+ ● Userm filenameforfiles and rmdir dirname for directories.
+ 27.What is the difference between “tail” and “tail-10”?
+ ● taildisplays the last 10 lines of a file by default, while tail-10 explicitly
+ specifies to display the last 10 lines.
+ 28.List 4 commands to display or read a file's contents.
+ ● cat,more, less, vi.
+ 29.Which command is used to read the top 5 lines of a file?
+ ● head-5 filename
+ 30.What are the different commands or methods to write to a file?
+ ● echo > filename,vi filename, cat > filename.
+ 31.What are the different types of shells?
+ ● Sh,bash, ksh, csh, zsh
+ 32.Which is the core of the operating system?
+ ● Kernel
+ 33.Which among the following interacts directly with system hardware?
+ ● Kernel
+ 34.List a few commands that are used in troubleshooting network-related issues?
+ ● netstat: Displays network connections.
+ ● tcpdump: Captures and analyzes network traffic.
+ ● ping:Tests connectivity to another host.
+ ● traceroute: Traces the route packets take to a network host.
+ 35.How to combine 2 files into 1? E.g., you have 3 lines in file “A” and 5 lines in file
+ “B”, which command syntax to use that will combine into one file of 3+5 = 8
+ lines?**
+ ● cat fileA fileB > combinedfile
+ 36.What is the echo command used for?
+ ● The`echo` commandisused to display a line of text or output a string to
+ the screen.
+ 37.What does the following command do?
+ in/harunseker/
+ 3
+● echo "This year the summer will be great" > file1
+ ● Itcreates a new file named “file1” and writes the text “This year the
+ summer will be great” into it. If the file already exists, it will be overwritten.
+ 38.When you login you get “$” prompt, what is the prompt for root?
+ ● Thepromptforthe root user is typically #.
+ 39.Explain the difference between grep and egrep.
+ ● grepisusedfor basic regular expression pattern matching, while egrep
+ (or grep-E) supports extended regular expressions, which allow more
+ complex pattern matching.
+ 40.What is the port number for DNS, NTP, and NFS?
+ ● DNS:53,NTP:123, NFS: 111 (portmapper) and 2049 (NFS).
+ 41.What is the configuration file name of DNS and where is it located?
+ ● TheDNSconfiguration file is named named.conf and is typically located in
+ /etc.
+ 42.How many newdirectories will be created after running the following command
+ mkdir {a..c}{1..3}?
+ ● 9directories will be created: a1, a2, a3, b1, b2, b3, c1, c2, c3.
+ 43.Your PC is configured with a DNS server address but not the default gateway.
+ Can the PC access the internet?
+ ● No,without a default gateway, the PC cannot access the internet.
+ 44.What is the difference between IP and Gateway?
+ ● AnIPaddressis aunique identifier for a device on a network, while a
+ gateway is a network point that acts as an entrance to another network,
+ often used to connect local networks to external networks like the
+ internet.
+ 45.Can you assign one static IP to 2 computers, if not then why?
+ ● No,assigning the same static IP to two computers will create an IP
+ conflict, causing network communication issues.
+ 46.How to change IP address to static?
+ ● YoucanchangetheIPaddress to static by editing the network
+ configuration files, such as /etc/network/interfaces on Debian-based
+ in/harunseker/
+ 4
+systems or /etc/sysconfig/network-scripts/ifcfg-eth0 on Red
+ Hat-based systems, and setting the IP address manually.
+ ● etc/netplan for the network configuration file on Ubuntu.
+ 47.You are trying to ping a server by hostname and you get an error message, “ping:
+ unknown host ...”. What could be the reason and how to solve the problem so you
+ can ping it by hostname?
+ ● Theissuecould be due to a missing hostname-to-IP mapping in the
+ /etc/hosts file or an incorrect DNS configuration. Check and update
+ these files to resolve the issue.
+ 48.Explain the difference between relative and absolute path.
+ ● Anabsolute path starts from the root directory / and specifies the
+ complete path to a file or directory. A relative path is based on the current
+ directory and does not start with /.
+ 49.What is the command to change file/directory ownership and group?
+ ● Usechowntochangeownership and chgrp to change the group.
+ 50.List any 3 types of filesystem.
+ ● ext4, NTFS, and FAT.
+ 51.When you login you get a message on the screen. What is the name of that file
+ and where is it located?
+ ● Thefileis/etc/motd (Message of the Day).
+ 52.What is the /bin directory used for?
+ ● The/bindirectory contains essential binary executables needed for
+ booting and system repair.
+ 53.What are the different types of DNS Server?
+ ● Master(Primary) and Secondary (Slave) DNS servers.
+ 54.Where are the zone files located for DNS service?
+ ● Typically located in /var/named/zonefiles.
+ 55.How many megabytes in 1 gigabyte?
+ ● Thereare1024megabytes in 1 gigabyte.
+ 56.What is the purpose of having different network ports?
+ ● Sothecommunication of each application goes through a dedicated port
+ in/harunseker/
+ 5
+● Different network ports allow multiple applications to communicate over
+ the network simultaneously without interference.
+ 57.How to display the first column of a file?
+ ● Usecat filename | awk ‘{print $1}’
+ ● awk '{print $1}' filename.
+ 58.What is the name of the DNS rpm package?
+ ● Thepackageiscalled bind.
+ 59.What is the difference between nslookup and dig commands?
+ ● nslookupis asimple tool for querying DNS servers, while dig provides
+ more detailed information and is more flexible for DNS troubleshooting.
+ 60.How to check your user id and group id?
+ ● Usetheidcommand.
+ 61.What is the difference between “kill” and “kill-9” command?
+ ● killsendsasignal to terminate a process gracefully, allowing it to clean
+ up resources. kill-9 sends a SIGKILL signal, forcing the process to
+ terminate immediately without cleanup.
+ 62.What is a subnet?
+ ● Asubnetisasegmented piece of a larger network, designed to improve
+ performance and security by grouping devices with similar network
+ requirements.
+ 63.You are troubleshooting an issue with Redhat support and they have asked you to
+ send the contents of /etc directory. How and which method will you use to
+ transfer the contents?
+ ● Compressthe/etcdirectory using tar and transfer it using ftp or scp.
+ 64.What is rsyslogd daemon and its purpose?
+ ● rsyslogdis asystem utility providing support for message logging. It is an
+ enhanced version of syslogd.
+ 65.What is the command to untar a tarred file?
+ ● Usetar-xvf filename.tar.
+ 66.What is the /proc directory used for?
+ ● The/procdirectory contains virtual files that provide a view into the
+ kernel's view of the system.
+ in/harunseker/
+ 6
+67.What is the purpose of the nsswitch.conf file?
+ ● Itspecifies the sources from which to obtain name-service information in
+ a range of categories and in what order.
+ 68.Which service/daemon should be running on the server that allows you to
+ connect remotely?
+ ● sshd(SSHDaemon).
+ 69.What is the purpose of a firewall?
+ ● Afirewall controls incoming and outgoing network traffic based on
+ predetermined security rules.
+ 70.List any 3 IT components.
+ ● Hardware, Operating System, and Applications.
+ 71.Which directory has all the commands we use, e.g., ls, cd, etc.?
+ ● /usr/binor/bin.
+ 72.What is the difference between memory, virtual memory, and cache?
+ ● Memory(RAM)isthephysical hardware inside a computer that
+ temporarily stores data.
+ ● Virtual memory is a memory management capability that uses disk space
+ as an extension of RAM.
+ ● Cacheisasmaller, faster memory component that stores copies of
+ frequently accessed data for quick access.
+ 73.Correct order of interaction:
+ ● a.User>> Operating System >> Hardware
+ 74.Which of the following is a communication command?
+ ● mail
+ 75.Why is the “tail–f logfilename” command used most often and what does it do?
+ ● Itoutputs all incoming logs in real-time, useful for monitoring log files as
+ they are updated.
+ 76.How to sort a file in reverse order?
+ ● Usesort-r filename.
+ 77.List all byte sizes from smallest to largest.
+ ● Bit, Byte, Kilobyte (KB), Megabyte (MB), Gigabyte (GB), Terabyte (TB),
+ Petabyte (PB), Exabyte (EB).
+ in/harunseker/
+ 7
+78.How to check the total number of partitions in Linux?
+ ● Usefdisk-l.
+ 79.How to access a Linux system from a Linux system?
+ ● Usessh.
+ 80.Explain the procedure of bonding 2 NICs or interfaces together.
+ ● Usenetworkbonding to combine two or more NICs into a single bonded
+ interface for redundancy or increased throughput. This typically involves
+ configuring /etc/network/interfaces or
+ /etc/sysconfig/network-scripts/ifcfg-bond0 and using the bonding
+ kernel module.
+ 81.What is the exact command syntax to list the 5th column of a file and cut the first
+ 3 letters?
+ ● awk '{print $5}' filename | cut-c1-3
+ 82.What is the /etc/hosts file used for?
+ ● Itis used to resolve hostnames to IP addresses locally.
+ 83.List any 3 options of ‘df’ command and what they are used for.
+ ●-h:human-readable format,-i: inodes information,-T: file system type.
+ 84.What is swap space and how to check swap space?
+ ● Swapspaceisaportion of the hard drive used as an extension of RAM.
+ Check swap space using swapon-s or free.
+ 85.What is inode and how to find an inode of a file?
+ ● Aninodeisadatastructure on a filesystem that stores information about
+ a file or directory. Use ls-i filename to find the inode number.
+ 86.Which file to edit for kernel tuning?
+ ● Edit/etc/sysctl.conf for kernel parameter tuning.
+ 87.What is the latest version of Redhat?
+ ● Searchonline for the most recent version as it frequently updates.
+ 88.Name the command to find aspecific word from a file.
+ ● grep word filename
+ 89.You have scheduled a job using crontab but it does not run at the time you
+ specified, what could be the reason and how would you troubleshoot?
+ ● Checksystemtime, crontab entry syntax, and /var/log/cron for errors.
+ in/harunseker/
+ 8
+90.How to check system hardware information?
+ ● Usedmidecode.
+ 91.How to check network interface MAC address?
+ ● Useifconfigorip link.
+ 92.If I don’t want others to read my file1, how do I do that?
+ ● Removereadpermission for others using chmod o-r file1.
+ 93.What is the purpose of “uniq” and “sed” commands?
+ ● uniqremovesduplicate lines from sorted input, sed is a stream editor for
+ f
+ iltering and transforming text.
+ 94.Which command is used to list the contents of a directory in the most recent
+ time and in reverse order, meaning the most updated file should be listed on the
+ bottom?
+ ● ls-ltr
+ 95.What is the difference between tar, gzip, and gunzip?
+ ● tarisusedfor archiving files, gzip compresses files, and gunzip
+ decompresses files.
+ 96.What are the different ways to install an OS?
+ ● UsingaDVD,DVDISO,ornetwork boot.
+ 97.How to view the difference between two files?
+ ● Usediff file1 file2.
+ 98.You noticed that one of the Linux servers has no disk space left, how would you
+ troubleshoot that issue?
+ ● Ifusing LVM, add more disk space and extend the logical volume. If not,
+ add a newdisk, create a partition, and link it to an existing filesystem.
+ 99.How to check Redhat version release?
+ ● Usecat /etc/redhat-release or uname-a.
+ 100. Whatisthe difference between TCP and UDP?
+ ● TCPisconnection-oriented and reliable, while UDP is connectionless and
+ faster but less reliable.
+ 101. Whatisazombieprocess?
+ in/harunseker/
+ 9
+● Azombieprocessis aprocess that has completed execution but still has
+ an entry in the process table, waiting for the parent process to read its exit
+ status.
+ 102. Howdoyousearchfor apattern/word in a file and then replace it in an entire
+ f
+ ile?
+ ● Usesedforsearch and replace operations.
+ 103. Howtocheckthenumber ofusers logged in?- Use who command.
+ 104. Whatisthe commandtoview the calendar of 2024?
+ cal 2024
+ 105. Whichcommandisusedtoview disk space?
+ df-h
+ 106. Howtocreate anewgroupin Linux?
+ ● groupadd groupname.
+ 107. Whatisthe commandtosend amessage toeveryone who is logged into the
+ system?
+ ● Usewallcommand.
+ 108. Whichcommandisusedtocheck the total number of disks?
+ ● fdisk-l.
+ 109. Whatisamail server record in DNS?
+ ● MX(MailExchange) record
+ 110. Whatdoesthefollowing command line do? ps-ef | awk '{print $1}' |
+ sort | uniq
+ ● Liststhe first column of all running processes, sorts them, and removes
+ duplicates.
+ 111. Yougetacall that when a user goes to www.yourwebsite.com it fails and gets
+ an error, how do you troubleshoot?
+ ● Checkuserinternet connectivity, DNS configuration, server status, and
+ web service available
+ 112. List 4 different directories in /?
+ ● /etc,/bin, /tmp, /home.
+ 113. Whatisthe output of the following command:
+ ● $ tail-10 filename | head-1
+ in/harunseker/
+ 10
+● Itwill show the first line from the last 10 lines of a file.
+ 114. Whatarethe different fields in /etc/passwd file?
+ The `/etc/passwd` file contains the following fields separated by colons (:):
+ ● Username: Theuser's login name.
+ ● Password: An'x' character indicates that the password is stored in the
+ `/etc/shadow` file.
+ ● UID:User ID number.
+ ● GID:GroupID number.
+ ● GECOS:User's full name or other information.
+ ● HomeDirectory: The path to the user's home directory.
+ ● Shell: The user's default shell.
+ 115. Whichcommandisusedtolist the processes?
+ ● ps-ef
+ The `ps-ef` command is used to list all the currently running processes.
+ 116. Whatisthe difference between “hostname” and “uname” commands?
+ ● hostname: Displays or sets the system's hostname.
+ ● uname:Prints system information, such as the kernel name, version, and
+ other details. `uname-n` specifically prints the network node hostname,
+ similar to the `hostname` command.
+ 117. Howtochecksystem load?
+ ● Youcanchecksystemload using the top and uptime commands.
+ 118. Howtoschedule jobs?
+ ● Youcanschedule jobs using crontab for repetitive tasks and at for
+ one-time tasks.
+ 119. Whatisthe 3rd field when setting up crontab?
+ ● Thethird field in a crontab entry is the "Day of the month".
+ 120. Whatisthe “init #” for system reboot?
+ ● The`init` level for system reboot is `6`.
+ 121. Howtorestart a service?
+ ● systemctl restart servicename
+ ● sudo service servicename restart
+ in/harunseker/
+ 11
+122. Howtoshutdownasystem?**
+ ● shutdown now
+ ● init 0
+ ● systemctl poweroff
+ 123. Whatisthe “ftp” command used for?
+ ● The`ftp` command is used to transfer files between a local system and a
+ remote server using the FTP protocol.
+ 124. Explain cron job syntax? First is minute, second is..?
+ ● Thecronjobsyntax consists of five fields followed by the command to be
+ executed:
+ ○ 1.Minute(0-59)
+ ○ 2.Hour(0-23)
+ ○ 3.Dayofthemonth(1-31)
+ ○ 4.Month(1-12 or JAN-DEC)
+ ○ 5.Dayoftheweek(0-6 or SUN-SAT).
+ 125. Howtodelete a package in Linux?
+ ● rpm-e packagename
+ ● forRPM-based systems.
+ 126. Whatisthe file name where user password information is saved?
+ ● Theuserpasswordinformation is saved in the `/etc/shadow` file.
+ 127. Whichcommandwouldyouusetofindthe location of the chmod command?
+ ● which chmod
+ 128. Whichcommandisusedtocheck if the other computer is online?
+ ● ping othercomputer
+ 129. Please explain about LAN, MAN and WAN?
+ ● LAN(LocalArea Network): Covers a small geographic area like a home,
+ office, or building.
+ ● MAN(Metropolitan Area Network): Spans a city or a large campus.
+ ● WAN(WideAreaNetwork): Covers a large geographic area, such as a
+ country or continent, connecting multiple LANs.
+ 130. Howtolist hidden files in a directory?
+ ● ls-la
+ in/harunseker/
+ 12
+131. Whatisthe difference between telnet and ssh?
+ ● SSH(SecureShell): Provides encrypted communication and is secure.
+ ● Telnet: Does not provide encryption and is not secure.
+ 132. Howtorunacalculator on Linux and exit out of it?
+ ● Run`bc`tostart the calculator and type `quit` to exit.
+ 133. List any 4 commands tomonitor the system?
+ ● top
+ ● df-h
+ ● iostat
+ ● dmesg
+ 134. Youarenotified that your server is down, list the steps you will take to
+ troubleshoot?
+ ●-Checkthesystem physically.
+ ●-Loginthrough the system console.
+ ●-Pingthesystem.
+ ●-Rebootorboot if possible.
+ 135. Whatisthe difference between static and DHCP IP?
+ ● Static IP: Manually assigned and does not change.
+ ● DHCPIP:Automatically assigned by a DHCP server and can change over
+ time.
+ 136. Howtowrite in vi editor mode?
+ ●-`i` = insert
+ ●-`a`=insert after the cursor
+ ●-`o`=insert a new line below the current line
+ 137. Whatisthe difference between “crontab” and “at” jobs?
+ ● crontab: Schedules repetitive jobs.
+ ● at:Schedules one-time jobs.
+ 138. WhatisvCenter server in VMWare?
+ ● vCenter Server is a centralized management tool for managing VMware
+ vSphere environments, providing control over virtual machines, ESXi hosts,
+ and other components.
+ in/harunseker/
+ 13
+139. Whatisthe “dmidecode” command used for?
+ ● The`dmidecode` command is used to retrieve system hardware
+ information from the DMI (Desktop Management Interface) table.
+ 140. Whatisthe difference between SAN and NAS?
+ ● SAN(StorageArea Network): Provides block-level storage and is typically
+ used in enterprise environments.
+ ● NAS(NetworkAttached Storage): Provides file-level storage and is often
+ used for simpler file sharing.
+ 141. Whatisthe location of system logs? E.g. messages
+ ● Systemlogsare typically located in the /var/log directory.
+ 142. Howtosetupanalias and what is it used for?
+ ● alias aliasname="command"
+ ● Itis used to create shortcuts for long commands.
+ 143. Whatisthe purpose of the “netstat” command?
+ ● The`netstat` command is used to display network connections, routing
+ tables, interface statistics, masquerade connections, and multicast
+ memberships.
+ 144. Whatareterminal control keys, list any 3?
+ ○ Ctrl+C: Interrupt a process.
+ ○ Ctrl+D: End of input (EOF).
+ ○ Ctrl+Z: Suspend a process.
+ 145. Whichcommand(s) you would run if you need to find out how many
+ processes are running on your system?
+ ● ps-ef | wc-l
+ 146. Howtodelete a line when in vi editor mode?
+ ● Press`dd` to delete a line.
+ 147. Howtosaveandquit from vi editor?
+ Press `Shift ZZ` or type `:wq!` and press Enter.
+ 148. Whatisthe difference between a process and daemon?
+ ● Process: Arunning instance of a program.
+ ● Daemon:Abackground process that starts at boot time and runs
+ continuously.
+ in/harunseker/
+ 14
+149. Whatisthe process or daemon name for NTP?
+ ● TheprocessordaemonnameforNTPis`ntpd`.
+ 150. Whatareafewcommandsyouwouldrunif your system is running slow?
+ ● `top`: To view running processes and their resource usage.
+ ● `iostat`: To monitor system input/output device loading.
+ ● `df-h`: To check disk space usage.
+ ● `netstat`: To display network connections and statistics.
+ 151. Howtoinstall a package in Redhat Linux?
+ ● yum install packagename
+ 152. Whatisthe difference between “ifconfig” and “ipconfig” commands?
+ ● ifconfig: Used in Linux to configure and display network interface
+ parameters.
+ ● ipconfig: Used in Windows to display all current TCP/IP network
+ configuration values.
+ 153. Whatisthe first line written in a shell script?
+ ● Thefirstline in a shell script is the shebang, which defines the shell to
+ interpret the script, e.g., `#!/bin/bash`.
+ 154. Whereis the network (Ethernet) file located, please provide the exact directory
+ location and file name?
+ ● Thenetworkconfiguration file is located at
+ `/etc/sysconfig/network-scripts/ifcfg-nic`, where `nic` represents the
+ network interface card name (e.g., `eth0`).
+ 155. Whydoweusethe“last” command?
+ ● The`last` command is used to display a list of the last logged-in users,
+ showing both active and logged-off sessions.
+ 156. WhatdoesRHELLinuxstand for?
+ ● RHELstandsforRedHat Enterprise Linux.
+ 157. Toviewyour commandhistory, which command is used and how to run a
+ specific command?
+ ● Usehistory toviewthe commandhistory.
+ ● Torunaspecific command, use!n, where `n` is the command number
+ from the history list.
+ in/harunseker/
+ 15
+158. WhatisNTPandbriefly explain how it works and where are the config files
+ and related commands of NTP?
+ ● NTP(NetworkTimeProtocol): Used to synchronize the clocks of
+ computers over a network.
+ ● Howitworks:NTPservers provide time information to clients, which
+ adjust their clocks accordingly.
+ ● Configfiles: Located at `/etc/ntp.conf`.
+ ● Related commands**: `ntpd` for the daemon, `ntpq` for querying NTP
+ servers.
+ 159. Howtodisable the firewall in Linux?
+ ● Todisable the firewall, you can use:
+ ● systemctl stop firewalld
+ ● systemctl disable firewalld
+ 160. Howtoconfiguremail server relay for sendmail service?
+ ● Editthe `/etc/mail/sendmail.mc` file and add the `SMART_HOST` entry to
+ specify the relay host.
+ 161. Whereis the samba log file located?
+ ● TheSambalogfileislocated at var/log/samba.
+ 162. Whatisthe `mkfs` command used for?**
+ ● The`mkfs`commandisusedtocreate a new filesystem on a device.
+ 163. If you create a new group, which file does it get created in?
+ ● Thenewgroupinformation is stored in the `/etc/group` file.
+ 164. Whichfile has DNSserver information (e.g., DNS resolution)?
+ ● DNSserverinformation is stored in the `/etc/resolv.conf` file.
+ 165. Whatarethe commands youwould run if you need to find out the version and
+ build date of a package (e.g., http)?
+ ● rpm-qi http
+ 166. Onthefile permissions, what are the first 3 bits for and who is it for?
+ ● Thefirstthree bits represent the permissions for the file owner: read (r),
+ write (w), and execute (x).
+ 167. Howtocreate asoft link?
+ ● ln-s target linkname
+ in/harunseker/
+ 16
+168. Howtowrite ascript to delete messages in a log file older than 30 days
+ automatically?
+ ● Youcanusethe`find` command in ascript:
+ ● find /path/to/logs-type f-mtime +30-exec rm {} \;
+ 169. Howtoquit out of the “man” command?
+ ● Pressqtoquit the manual page viewer.
+ 170. Whichcommandisusedtopartition a disk in Linux?
+ ● Thefdisk commandisusedtopartition a disk.
+ 171. Whatisthe difference between the “shutdown” and “halt” command?
+ ● shutdown: Gracefully shutdown the system, allowing processes to
+ terminate properly.
+ ● halt:Stopsall processes and halts the system without powering it off.
+ 172. Whatisthe exact syntax of mounting an NFS share on a client and also how
+ to un-mount?**
+ ● Mount:`mount-t nfs server:/path/to/share /mount/point`
+ ● Unmount:`umount /mount/point`
+ 173. Whatexperience do you have with scripting, explain?
+ ● Experience with scripting includes using control structures like `if-then`,
+ `do-while`, `case`, and `for` loops to automate tasks.
+ 174. Howtogetinformation on all the packages installed on the system?
+ ● rpm-qa
+ 175. Explain VMWare?**
+ ● VMWareisacompanythatprovides cloud computing and virtualization
+ technology, including products like vSphere, ESXi, and vCenter.
+ 176. Youaretasked to examine a log file in order to find out why a particular
+ application keeps crashing. The log file is very lengthy, which command can you
+ use to simplify the log search using a search string?
+ ● Usethe`grep` command tosearch for specific strings like "error",
+ "warning", or "failure" in the log file:
+ ● grep "error"/var/log/messages
+ in/harunseker/
+ 17
+177. Whatisan /etc/fstab file and explain each column of this file?
+ ● The`/etc/fstab` file contains information about filesystems and their
+ mount points. Each line has six fields:
+ ● 1.**Device**: The block device or remote filesystem.
+ ● 2.**MountPoint**: Directory where the filesystem is mounted.
+ ● 3.**Filesystem Type**: Type of filesystem (e.g., ext4, nfs).
+ ● 4.**Options**: Mount options (e.g., defaults, ro).
+ ● 5.**Dump**: Backup utility flag (0 or 1).
+ ● 6.**Pass**: Filesystem check order at boot (0, 1, or 2).
+ 178. Whatisthe latest version of Windows server?
+ ● Thelatest version as of 2023 is Windows Server 2022.
+ 179. Whatisthe exact command to list only the first 2 lines of history output?
+ ● history | head-2
+ 180. HowtoupgradeLinux from 7.3 to 7.4?
+ ● yum update:This commandupdates all packages to their latest versions,
+ including upgrading the distribution version.
+ 181. Howtotell which shell you are in or running?
+ ● echo $0
+ 182. Youhavetried to “cd” into a directory but you have been denied. You are not
+ the owner of that directory, what permissions do you need and where?
+ ● Youneedexecute (`x`) permission on the directory to change into it.
+ 183. WhatisCNAMErecordin DNS?
+ ● ACNAME(CanonicalName)record is a type of DNS record that maps an
+ alias name to a true or canonical domain name.
+ 184. Whatisthe nameofthe VMWareoperating system?**
+ ● TheVMWareoperating system is called ESXi.
+ 185. Whatisthe client name used to connect to ESXi or vCenter server?
+ ● Theclient used to connect to ESXi or vCenter is the vSphere Client.
+ 186. Yougetacall from a user saying that I cannot write to a file because it says,
+ permission denied. The file is owned by that user, how do you troubleshoot?
+ ● Checkthefile permissions and ensure the user has write (`w`) permission.
+ 187. Whatisthe latest version of VMWare?
+ ● Asof2023,thelatest version of VMware vSphere is 8.0.
+ in/harunseker/
+ 18
+188. Whatisthe nameofthe firewall daemon in Linux?
+ ● Thefirewall daemon in Linux is called `firewalld`.
+ 189. Whichcommandsyntax can you use to list only the 20th line of a file?
+ ● sed-n '20p' filename
+ 190. Whatisthe difference between run level 3 and 5?
+ ● Runlevel 3: Multi-user mode with networking, but without a graphical
+ interface.
+ ● Runlevel 5: Multi-user mode with networking and a graphical interface
+ (GUI).
+ 191. Whatisthe difference between domain and nameserver?
+ ● Domain: Adomain is a human-readable address used to access resources on
+ the internet.
+ ● Nameserver: A server that translates domain names into IP addresses.
+ 192. Youopenupafileandit has 3000 lines and it scrolls up really fast, which
+ commandwill you use to view it one page at a time?
+ ● Use`less` or `more` to view the file one page at a time.
+ 193. Howtostart a newshell. E.g., start a new ksh shell?
+ ● Simplytype `ksh` or `bash` to start a new shell session.
+ 194. Howtokill a process?
+ ● kill processID
+ 195. Howtocheckscheduled jobs?
+ ● crontab-l
+ 196. Howtochecksystem memoryandCPUusage?
+ ● Memory:Use`free`.
+ ● CPUUsage:Use`top` or `htop`.
+ 197. Whichutility could you use to repair the corrupted file system?**
+ ● Usethe`fsck` (File System Consistency Check) utility.
+ 198. Whatisthe commandtomakeaservice start at boot?**
+ ● systemctl enable servicename
+ 199. Whichfile to modify to allow users to run root commands?**
+ ● Modifythe `/etc/sudoers` file, typically using `visudo` for safe editing.
+ 200. Youneedtomodify the httpd.conf file but you cannot find it. Which command
+ line tool can you use to find the file?**
+ in/harunseker/
+ 19
+● find /-name "httpd.conf"
+ 201. Yoursystemcrashedandisbeingrestarted,butamessageappears
+ indicatingthattheoperatingsystemcannotbefound.Whatisthemostlikely
+ causeoftheproblem?
+ ● The`/boot`partitionorbootloaderismostlikelycorruptedormissing.
+ 202. Whatarethemostessential [70+]LinuxCommandsyouNEEDtoknow
+ No Command Description Example
+ 1 ssh Connectstoaremote
+ machineviaSSH.
+ ssh user@hostnameconnectstothe
+ remotemachinehostnameasuser.
+ 2 ls Listsdirectorycontents.
+ ls-llistsfilesinlongformat,showing
+ permissions,owner,size,and
+ modificationdate.
+ 3 pwd Printsthecurrentworking
+ directory.
+ pwddisplaysthefullpathofthecurrent
+ directory.
+ 4 cd Changesthecurrent
+ directory.
+ cd /home/userchangesthedirectory
+ to/home/user.
+ 5 touch
+ Createsanemptyfileor
+ updatesthetimestampof
+ anexistingfile.
+ touch newfile.txtcreatesanempty
+ filenamednewfile.txt.
+ 6 echo Displaysalineoftextora
+ variablevalue.
+ echo "Hello, World!"prints
+ Hello, World!totheterminal.
+ 7 nano OpentheNanotexteditor. nano file.txtopensfile.txtin
+ theNanoeditor.
+ 8 vim OpentheVimtexteditor. vim file.txtopensfile.txtinthe
+ Vimeditor.
+ in/harunseker/ 20
+9 cat Concatenatesand
+ displaysfilecontent.
+ cat file.txtdisplaysthecontentof
+ file.txt.
+ 10 shred
+ Overwritesafiletohideits
+ contentsandoptionally
+ deletesit.
+ shred-u file.txtoverwritesand
+ deletesfile.txt.
+ 11 mkdir Createsanewdirectory. mkdir newdircreatesadirectory
+ namednewdir.
+ 12 cp Copiesfilesordirectories. cp file1.txt file2.txtcopies
+ file1.txttofile2.txt.
+ 13 rm Removesfilesor
+ directories. rm file.txtdeletesfile.txt.
+ 14 rmdir Removesanempty
+ directory.
+ rmdir olddirremovestheempty
+ directoryolddir.
+ 15 ln Createshardandsymbolic
+ links.
+ ln-s target linknamecreatesa
+ symboliclinknamedlinknamepointing
+ totarget.
+ 16 clear Clearstheterminalscreen. clearclearstheterminaldisplay.
+ 17 whoami Displaysthecurrent
+ logged-inuser.
+ whoamishowstheusernameofthe
+ currentuser.
+ 18 useradd Addsanewuser. sudo useradd newuseraddsanew
+ usernamednewuser.
+ 19 sudo
+ Executesacommandas
+ anotheruser,typicallythe
+ superuser.
+ sudo apt-get updaterunsthe
+ apt-get updatecommandwith
+ superuserprivileges.
+ in/harunseker/ 21
+20 adduser Addsanewuserwitha
+ moreinteractiveinterface.
+ sudo adduser newuserinteractively
+ addsanewusernamednewuser.
+ 21 su Switchtoanotheruser
+ account.
+ su-userswitchestotheuser
+ account.
+ 22 exit Exitsthecurrentshellor
+ session. exitlogsoutofthecurrentsession.
+ 23 passwd Changesauser's
+ password.
+ passwdpromptstochangethecurrent
+ user'spassword.
+ 24 apt Managespackageson
+ Debian-basedsystems.
+ sudo apt install packageinstalls
+ thespecifiedpackage.
+ 25 finger Displaysinformation
+ aboutsystemusers.
+ finger usershowsdetailsabout
+ user.
+ 26 man Displaysthemanualpage
+ foracommand.
+ man lsshowsthemanualforthels
+ command.
+ 27 whatis Displaysabrief
+ descriptionofacommand.
+ whatis lsprovidesashortdescription
+ ofthelscommand.
+ 28 curl Transfersdatafromortoa
+ server.
+ curl-O
+ http://example.com/file.txt
+ downloadsfile.txtfromthespecified
+ URL.
+ 29 zip Compressesfilesintoa
+ ziparchive.
+ zip archive.zip file1 file2
+ compressesfile1andfile2into
+ archive.zip.
+ in/harunseker/ 22
+30 unzip Extractsfilesfromazip
+ archive.
+ unzip archive.zipextractsfiles
+ fromarchive.zip.
+ 31 less Viewsfilecontentone
+ screenatatime.
+ less file.txtdisplaysfile.txt
+ contentonescreenatatime.
+ 32 head Displaysthefirstpartofa
+ file.
+ head-n 10 file.txtshowsthefirst
+ 10linesoffile.txt.
+ 33 tail Displaysthelastpartofa
+ file.
+ tail-n 10 file.txtshowsthelast
+ 10linesoffile.txt.
+ 34 cmp Comparetwofilesbyteby
+ byte.
+ cmp file1 file2comparesfile1
+ andfile2.
+ 35 diff Comparesfileslinebyline. diff file1 file2showsthe
+ differencesbetweenfile1andfile2.
+ 36 sort Sortslinesoftextfiles. sort file.txtsortsthelinesin
+ file.txt.
+ 37 find Searchesforfilesina
+ directoryhierarchy.
+ find /home-name "*.txt"findsall
+ .txtfilesinthe/homedirectory.
+ 38 chmod Changesfilepermissions.
+ chmod 755 script.shsetsthe
+ permissionsofscript.shto
+ rwxr-xr-x.
+ 39 chown Changesfileownerand
+ group.
+ chown user:group file.txt
+ changestheownerandgroupof
+ file.txttouserandgroup.
+ 40 ifconfig Configuresnetwork
+ interfaces.
+ ifconfig eth0displaysthe
+ configurationoftheeth0interface.
+ in/harunseker/ 23
+41 ip address DisplaysIPaddressesand
+ interfaces.
+ ip address showshowsallIP
+ addressesandnetworkinterfaces.
+ 42 grep Searchesforpatternsin
+ files.
+ grep "pattern" file.txtsearches
+ for"pattern"infile.txt.
+ 43 awk
+ Aprogramminglanguage
+ forpatternscanningand
+ processing.
+ awk '{print $1}' file.txtprints
+ thefirstfieldofeachlineinfile.txt.
+ 44 resolvectl
+ status
+ ShowsthecurrentDNS
+ settings.
+ resolvectl statusdisplaystheDNS
+ configurationandstatus.
+ 45 ping
+ SendsICMP
+ ECHO_REQUESTpackets
+ tonetworkhosts.
+ ping google.comsendspingrequests
+ togoogle.com.
+ 46 netstat
+ Displaysnetwork
+ connections,routing
+ tables,andinterface
+ statistics.
+ netstat-tulnshowslisteningports
+ andtheirstatus.
+ 47 ss Displayssocketstatistics.
+ ss-tulnshowslisteningsockets.
+ ss-l4p displaysall listeningIPv4
+ socketsalongwiththeassociated
+ processes
+ 48 iptables Configurespacketfiltering
+ rules.
+ sudo iptables-Llistsallcurrent
+ iptablesrules.
+ 49 ufw Managesfirewallwith
+ UncomplicatedFirewall. sudo ufw enableenablesthefirewall.
+ 50 uname Printssysteminformation. uname-adisplaysallsystem
+ information.
+ in/harunseker/ 24
+51 neofetch
+ Displayssystem
+ informationwithan
+ aestheticlayout.
+ neofetchshowssysteminformationin
+ avisuallyappealingformat.
+ 52 cal Displaysacalendar. calshowsthecurrentmonth'scalendar.
+ 53 free Displaysmemoryusage. free-hshowsmemoryusageina
+ human-readableformat.
+ 54 df Displaysdiskspaceusage
+ offilesystems.
+ df-hshowsdiskspaceusageina
+ human-readableformat.
+ 55 ps Displaysinformation
+ aboutactiveprocesses.
+ ps auxshowsdetailedinformation
+ aboutallrunningprocesses.
+ 56 top Displaysreal-timesystem
+ resourceusage.
+ topshowsreal-timeprocessesand
+ systemresourceusage.
+ 57 htop Aninteractiveprocess
+ viewer.
+ htopprovidesaninteractiveviewof
+ systemprocesses.
+ 58 kill Terminatesaprocessby
+ PID.
+ kill 1234terminatestheprocesswith
+ PID1234.
+ 59 pkill Terminatesprocessesby
+ name.
+ pkill firefoxterminatesall
+ processesnamedfirefox.
+ 60 systemctl Managessystemd
+ services.
+ systemctl status nginxshowsthe
+ statusofthenginxservice.
+ 61 history Displaysthecommand
+ history.
+ historyshowsthelistofpreviously
+ executedcommands.
+ in/harunseker/ 25
+62 reboot Rebootsthesystem. sudo rebootrestartsthesystem.
+ 63 shutdown Shutsdownorrebootsthe
+ system.
+ sudo shutdown-h nowshutsdown
+ thesystemimmediately.
+ 64 traceroute Tracestheroutepackets
+ taketoanetworkhost.
+ traceroute google.comshowsthe
+ routetogoogle.com.
+ 65 dig QueriesDNSservers. dig example.comretrievesDNS
+ informationforexample.com.
+ 66 host PerformsDNSlookups. host example.comshowstheIP
+ addressofexample.com.
+ 67 arp Displaysandmodifiesthe
+ ARPtable. arp-ashowsthecurrentARPtable.
+ 68 iwconfig Configureswireless
+ networkinterfaces.
+ iwconfig wlan0showsthe
+ configurationofthewlan0wireless
+ interface.
+ 69 hostname Displaysorsetsthe
+ system'shostname. hostnameshowsthecurrenthostname.
+ 70 whois
+ QueriestheWHOIS
+ databasefordomain
+ information.
+ whois example.comretrievesWHOIS
+ informationforexample.com.
+ in/harunseker/ 26
